@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #b31818;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
@@ -20,7 +28,7 @@
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
-    --border: 0 0% 89.8%;
+    /* --border: 0 0% 89.8%; */
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --sidebar: oklch(0.985 0 0);
@@ -92,3 +100,4 @@
     @apply bg-background text-foreground;
   }
 }
+

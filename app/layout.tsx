@@ -19,10 +19,10 @@ export default function RootLayout({
       <body>
         <SidebarProvider>
           <AppSidebar />
-          <div className="bg-red-600 px-8 pt-2">
+          {/* <span className="pt-6">
             <SidebarTrigger  />
+          </span> */}
             {children}
-          </div>
         </SidebarProvider>
       </body>
     </html>
