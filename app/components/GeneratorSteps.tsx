@@ -86,7 +86,7 @@ function GeneratorSteps({ isGenerateOpen, message } : GeneratorProps) {
                                 <p className="text-sm text-slate-500 mb-2">Gift Budget:</p>
                                 <div className="relative">
                                     <DollarSign className="-translate-y-1/2 absolute top-1/2 left-3 h-4 w-4 text-muted-foreground" />
-                                    <Input type="number" name="budget" placeholder="0.00" className="w-1/2 pl-9 mr-2" /><span className="text-muted-foreground text-xs">Enter amount in USD</span>
+                                    <Input type="number" name="budget" placeholder="0.00" min="0" step="0.01" className="w-1/2 pl-9 mr-2" /><span className="text-muted-foreground text-xs">Enter amount in USD</span>
                                 </div>
                             </div>
                             
