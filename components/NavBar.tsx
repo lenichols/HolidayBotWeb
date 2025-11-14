@@ -7,19 +7,20 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Button } from "./ui/button";
+import { Coffee } from "lucide-react";
 
 export default function NavBar() {
     return (
-        <div className="flex w-full items-center justify-center pr-16 pt-4">
+        <div className="flex w-full items-center justify-center pr-6 pt-4">
             <div className="w-1/3 ml-4">
-                <h1 className="text-4xl text-white text-shadow-5xs text-start">
-                    <span className="font-black underline">Holiday</span>
-                        Bot
+                <h1 className="text-4xl text-white text-start">
+                    <span className="font-bold underline text-shadow-sm text-shadow-black/10">Holiday</span>
+                    <span className="text-shadow-sm text-shadow-black/10">Bot</span>
                     <sup className="text-red-800">AI</sup>
                 </h1>
             </div>
             <div className="w-1/3 flex items-center justify-center">
-                <span className="float-start">Select an Occasion: </span>
+                <span className="float-start text-sm font-bold">Select an Occasion: </span>
                 <Select>
                     <SelectTrigger className="w-[240px] mx-auto border-none bg-white text-xl focus:ring-red-200 text-red-600">
                         <SelectValue placeholder="Christmas Holiday" />
@@ -34,7 +35,7 @@ export default function NavBar() {
             </div>
             <div className="w-1/3">
                 {/* <Link href="href">Random Gift Generator</Link> */}
-                <Button variant="link" className="float-end" >Random Gift Generator</Button>
+                <Button variant="link" className="float-end text-white" ><Coffee className="size-4" /> Buy Us Coffee</Button>
                 <Button variant="default" className="float-end">Submit a Wish List</Button>
 
             </div>

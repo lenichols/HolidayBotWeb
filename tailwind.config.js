@@ -1,11 +1,40 @@
 const animate = require("tailwindcss-animate");
+const textShadow = require("@designbycode/tailwindcss-text-shadow");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
     content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-  	extend: {
+	theme: {
+		extend: {
+				animation: {
+			typewriter: 'typewriter 4s steps(14) forwards',
+			caret: 'typewriter 4s steps(14) forwards, blink 1s steps(11) infinite 4s',
+		},
+		keyframes: {
+			typewriter: {
+			to: {
+				left: '100%',
+			},
+			},
+			blink: {
+			'0%': {
+				opacity: '0',
+			},
+			'0.1%': {
+				opacity: '1',
+			},
+			'50%': {
+				opacity: '1',
+			},
+			'50.1%': {
+				opacity: '0',
+			},
+			'100%': {
+				opacity: '0',
+			},
+			},
+		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
@@ -65,5 +94,5 @@ module.exports = {
   		}
   	}
   },
-  plugins: [animate, require("tailwindcss-animate")],
+  plugins: [animate, require("tailwindcss-animate"), textShadow, require("@designbycode/tailwindcss-text-shadow")],
 };
